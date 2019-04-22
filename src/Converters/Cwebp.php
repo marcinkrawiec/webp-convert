@@ -147,7 +147,9 @@ class Cwebp
 
         // Metadata (all, exif, icc, xmp or none (default))
         // Comma-separated list of existing metadata to copy from input to output
-        $commandOptionsArray[] = '-metadata ' . $options['metadata'];
+
+        // disabling for backwards compatibility with cwebp
+        // $commandOptionsArray[] = '-metadata ' . $options['metadata'];
 
         // Size
         if (!is_null($options['size-in-percentage'])) {
